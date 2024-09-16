@@ -42,6 +42,11 @@ p {
     padding: 2rem;
 }
 
+#InFact {
+    padding-inline: 1rem;
+    padding-block: 5rem;        
+}
+
 #roles h2 {
     font-family: 'Arvo', serif;
     font-size: 1.5rem;
@@ -64,6 +69,8 @@ p {
 #roles ul li {
     margin: 1rem 0;
     padding: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
@@ -112,6 +119,8 @@ footer {
     grid-column: 3;
     grid-row: 4;
     justify-self: center;
+    font-size: 0.4rem;
+    letter-spacing: 0.07rem;
 }
 
 /* Optional: Style for spans */
