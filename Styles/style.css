@@ -31,6 +31,28 @@ h1 {
     font-size: 2rem;
 }
 
+#name {
+    font-family: 'Arvo', serif;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+#name:hover {
+    transform: scale(1.5); /* Slightly enlarge the element */
+    text-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+
+#hint {
+    font-family: 'Lato', serif;
+    font-size: 0.4rem;
+    color: #333F4D;
+    font-weight: 100;
+    padding-left: 0.7rem;
+}
+
 p {
     font-family: 'Lato', serif;
     font-size: 1rem;
@@ -145,3 +167,33 @@ footer span {
         grid-column: 1;
     }
 }
+
+/* ------Effects Code------- */
+
+.rotate-crazy {
+    display: inline-block;
+    animation: spinJump 2s ease-in;
+}
+
+/* Keyframes for spinning (around Y-axis) and jumping */
+@keyframes spinJump {
+    0% {
+        transform: rotateY(0deg) translateY(0); /* Start position */
+    }
+    25% {
+        transform: rotateY(360deg) translateY(-300px); /* Full spin and jump */
+    }
+    50% {
+        transform: rotateY(1440deg) translateY(-300px); /* Landing after two spins */
+    }
+    75% {
+        transform: rotateY(11520deg) translateY(-300px); /* Smaller jump, another spin */
+    }
+    95% {
+        transform: rotateY(184320deg) translateY(-300px); /* Final landing after four spins */
+    }
+    100% {
+        transform: rotateY(5898240deg) translateY(0px); /* Final landing after four spins */
+    }
+}
+
