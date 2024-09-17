@@ -61,11 +61,11 @@ p {
 
 /* Roles Section */
 #roles {
-    padding: 2rem;
+    padding: 0rem;
 }
 
 #InFact {
-    padding-inline: 1rem;
+    padding-inline: 3rem;
     padding-block: 5rem;        
 }
 
@@ -86,11 +86,13 @@ p {
 #roles ul {
     list-style: none;
     padding: 0;
+    width:100%;
+
 }
 
 #roles ul li {
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 2rem 0;
+    padding: 0rem;
     font-size: 1.5rem;
     font-family: 'Arvo', serif;;
     border-radius: 8px;
@@ -101,6 +103,7 @@ p {
 #roles ul li:hover {
     transform: scale(1.05);
     cursor: pointer;
+    background-color: #FFFFC6;
 }
 
 /* Footer Section */
@@ -197,3 +200,49 @@ footer span {
     }
 }
 
+
+
+/* li elements */
+
+/* Define the unfolding text box */
+#text-box {
+    display: none; /* Hidden by default */
+    background-color: #F7CA74; /* Background color */
+    color: #333F4D; /* Text color */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth unfolding effect */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Show the text box */
+#text-box.visible {
+    display: block;
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+}
+
+/* Flash effect similar to Fanis */
+@keyframes riseRotate {
+    0% {
+        transform: rotateZ(0deg) translateX(0);
+    }
+    1% {
+        transform: rotateZ(0deg) translatY(-150px);
+    }
+    50% {
+        transform: rotateZ(0deg) translateY(-150px);
+    }
+    100% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+/* Apply animation to <li> on click */
+#development.clicked {
+    animation: riseRotate 0.5s ease-in;
+    cursor: pointer;
+}

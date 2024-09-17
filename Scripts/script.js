@@ -19,3 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const developmentElement = document.getElementById('development');
+    const textBox = document.getElementById('text-box');
+
+    developmentElement.addEventListener('click', function() {
+        // Add rotation class
+        developmentElement.classList.add('clicked');
+        
+        // Show the text box with unfolding effect
+        textBox.classList.add('visible');
+        
+        // Remove the class after animation duration
+        setTimeout(function() {
+            developmentElement.classList.remove('clicked');
+        }, 2000); // Match this duration with the flash animation duration
+    });
+});
