@@ -20,21 +20,39 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
-    const developmentElement = document.getElementById('development');
-    const textBox = document.getElementById('text-box');
+    const nameElement = document.getElementById('name');
+    const devSection = document.querySelector('.dev');
+    const musSection = document.querySelector('.mus');
+    const therSection = document.querySelector('.ther');
 
-    developmentElement.addEventListener('click', function() {
-        // Add rotation class
-        developmentElement.classList.add('clicked');
-        
-        // Show the text box with unfolding effect
-        textBox.classList.add('visible');
-        
-        // Remove the class after animation duration
-        setTimeout(function() {
-            developmentElement.classList.remove('clicked');
-        }, 2000); // Match this duration with the flash animation duration
-    });
+    const devLi = document.getElementById('development');
+    const musLi = document.getElementById('music');
+    const therLi = document.getElementById('therapy');
+
+   // Toggle the dev section
+   devLi.addEventListener('click', function() {
+    togglePopup(devSection);
+});
+
+// Toggle the mus section
+musLi.addEventListener('click', function() {
+    togglePopup(musSection);
+});
+
+// Toggle the ther section
+therLi.addEventListener('click', function() {
+    togglePopup(therSection);
+});
+
+// Function to toggle popup effect
+function togglePopup(section) {
+    if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+        section.classList.add('visible');
+    } else {
+        section.classList.remove('visible');
+        section.classList.add('hidden');
+    }
+}
 });
