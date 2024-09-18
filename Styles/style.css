@@ -35,13 +35,14 @@ h1 {
     font-family: 'Arvo', serif;
     font-size: 2rem;
     cursor: pointer;
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
-}
+    transition: background-color 2s, transform 2s;}
 
 /* Hover effect */
 #name:hover {
-    transform: scale(1.5); /* Slightly enlarge the element */
-    text-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Add shadow */
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s, transform 0s;
 }
 
 
@@ -51,6 +52,8 @@ h1 {
     color: #333F4D;
     font-weight: 100;
     padding-left: 0.7rem;
+    width: 80%;
+    text-align: right;
 }
 
 p {
@@ -68,6 +71,36 @@ p {
     padding-inline: 3rem;
     padding-block: 5rem;        
 }
+
+/* Default colors for the letters */
+
+#multiple span {
+    font-family: 'Arvo', serif;
+    font-size: 1.5rem;
+    color: #333F4D;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+/* Initial color setup for letters */
+#multiple .m { color: #333F4D; }
+#multiple .u { color: #333F4D; }
+#multiple .lt { color: #333F4D; }
+#multiple .i { color: #333F4D; }
+#multiple .p { color: #333F4D; }
+#multiple .l { color: #333F4D; }
+#multiple .e { color: #333F4D; }
+
+/* Color change on click */
+#multiple .m.clicked { color: #e81416; }
+#multiple .u.clicked { color: #ffa500; }
+#multiple .lt.clicked { color: #faeb36; }
+#multiple .i.clicked { color: #79c314; }
+#multiple .p.clicked { color: #487de7; }
+#multiple .l.clicked { color: #4b369d; }
+#multiple .e.clicked { color: #70369d; }
+
 
 #roles h2 {
     font-family: 'Arvo', serif;

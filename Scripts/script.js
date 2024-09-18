@@ -56,3 +56,16 @@ function togglePopup(section) {
     }
 }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const multipleElement = document.getElementById('multiple');
+    
+    // Add click event listener to the entire #multiple element
+    multipleElement.addEventListener('click', function() {
+        // Toggle the 'clicked' class on all span elements within #multiple
+        const letters = multipleElement.querySelectorAll('span');
+        letters.forEach(letter => {
+            letter.classList.toggle('clicked');
+        });
+    });
+});
