@@ -35,22 +35,42 @@ h1 {
     font-family: 'Arvo', serif;
     font-size: 2rem;
     cursor: pointer;
-    transition: background-color 2s, transform 2s;}
+    transition: background-color 2s;}
 
-/* Hover effect */
 #name:hover {
-    transform: scale(1.02);
     cursor: pointer;
     background-color: #FFFFC6;
-    transition: background-color 0s, transform 0s;
+    transition: background-color 0s;
 }
 
+#flashy {
+    font-family: 'Lato', serif;
+    font-size: 0.4rem;
+    color: #333F4D;
+    cursor: pointer;
+    transition: background-color 2s;}
+
+#flashy:hover {
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s;
+}
+
+main img {
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute; /* Absolute positioning to move it relative to its container */
+    left: 0; /* Align the image to the left */
+    top: 50%; /* Adjust to your needs */
+    transform: translateY(-50%);
+    max-width: 200px; /* Control the size of the image */
+}
 
 #hint {
     font-family: 'Lato', serif;
     font-size: 0.4rem;
     color: #333F4D;
-    font-weight: 100;
     padding-left: 0.7rem;
     width: 80%;
     text-align: right;
@@ -79,28 +99,41 @@ p {
     font-size: 1.5rem;
     color: #333F4D;
     cursor: pointer;
-    transition: color 0.3s ease;
     font-weight: bold;
+    transition: background-color 2s, color 0.5s, text-shadow 0.5s;
+}
+
+#multiple span:hover {
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s, color 0.5s, text-shadow 0.5s;
 }
 
 /* Initial color setup for letters */
-#multiple .m { color: #333F4D; }
-#multiple .u { color: #333F4D; }
-#multiple .lt { color: #333F4D; }
-#multiple .i { color: #333F4D; }
-#multiple .p { color: #333F4D; }
-#multiple .l { color: #333F4D; }
-#multiple .e { color: #333F4D; }
+#multiple .m { color: #333F4D;}
+#multiple .u { color: #333F4D;}
+#multiple .lt { color: #333F4D;}
+#multiple .i { color: #333F4D;}
+#multiple .p { color: #333F4D;}
+#multiple .l { color: #333F4D;}
+#multiple .e { color: #333F4D;}
 
 /* Color change on click */
-#multiple .m.clicked { color: #e81416; }
-#multiple .u.clicked { color: #ffa500; }
-#multiple .lt.clicked { color: #faeb36; }
-#multiple .i.clicked { color: #79c314; }
-#multiple .p.clicked { color: #487de7; }
-#multiple .l.clicked { color: #4b369d; }
-#multiple .e.clicked { color: #70369d; }
+#multiple .m.clicked { color: #e81416; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .u.clicked { color: #ffa500; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .lt.clicked { color: #faeb36; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .i.clicked { color: #79c314; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .p.clicked { color: #487de7; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .l.clicked { color: #4b369d; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
+#multiple .e.clicked { color: #70369d; text-shadow: 0 2px 4px #333F4D; transition: color 0.5s, text-shadow 0.5s, background-color 2s; }
 
+#multiple .m.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .u.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .lt.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .i.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .p.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .l.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
+#multiple .e.clicked:hover { transition: color 0.5s, text-shadow 0.5s, background-color 0s; }
 
 #roles h2 {
     font-family: 'Arvo', serif;

@@ -69,3 +69,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const flashyElement = document.getElementById('flashy');
+    const imgElement = document.querySelector('main img'); // Ensure it selects the correct img inside main
+    
+    flashyElement.addEventListener('click', function() {
+        if (imgElement.style.visibility === 'visible') {
+            // If the image is already visible, hide it
+            imgElement.style.visibility = 'hidden';
+            imgElement.style.opacity = '0';
+        } else {
+            // Otherwise, show the image
+            imgElement.style.visibility = 'visible';
+            imgElement.style.opacity = '1';
+            imgElement.style.transform = 'translateY(-50%)'; // Ensure proper positioning
+        }
+    });
+});
