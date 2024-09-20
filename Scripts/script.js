@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 nameElement.textContent = "I'm Fanis,";
             }
-        }, 2000); // Adjust the timeout to match your rotation animation duration
+        }, 1200); // Adjust the timeout to match your rotation animation duration
     });
 });
 
-
+// dev mus ther
 document.addEventListener("DOMContentLoaded", function() {
     const nameElement = document.getElementById('name');
     const devSection = document.querySelector('.dev');
@@ -56,7 +56,7 @@ function togglePopup(section) {
     }
 }
 });
-
+//multiple word
 document.addEventListener("DOMContentLoaded", function() {
     const multipleElement = document.getElementById('multiple');
     
@@ -70,21 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+//image
 document.addEventListener("DOMContentLoaded", function() {
     const flashyElement = document.getElementById('flashy');
-    const imgElement = document.querySelector('main img'); // Ensure it selects the correct img inside main
-    
+    const hintContainer = document.getElementById('hint-container');
+
     flashyElement.addEventListener('click', function() {
-        if (imgElement.style.visibility === 'visible') {
-            // If the image is already visible, hide it
-            imgElement.style.visibility = 'hidden';
-            imgElement.style.opacity = '0';
-        } else {
-            // Otherwise, show the image
-            imgElement.style.visibility = 'visible';
-            imgElement.style.opacity = '1';
-            imgElement.style.transform = 'translateY(-50%)'; // Ensure proper positioning
-        }
+        // Toggle the visibility of the image by adding/removing the .show-image class
+        hintContainer.classList.toggle('show-image');
     });
 });

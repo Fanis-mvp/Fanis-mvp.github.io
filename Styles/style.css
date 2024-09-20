@@ -56,15 +56,44 @@ h1 {
     transition: background-color 0s;
 }
 
-main img {
-    visibility: hidden; /* Initially hidden */
-    opacity: 0; /* Start with opacity 0 */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    position: absolute; /* Absolute positioning to move it relative to its container */
-    left: 0; /* Align the image to the left */
-    top: 50%; /* Adjust to your needs */
-    transform: translateY(-50%);
-    max-width: 200px; /* Control the size of the image */
+#hint-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+#hint-container img {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    margin-left: 10px; /* Adjust space between the hint and the image */
+    max-width: 500px; /* Adjust size if needed */
+    border-radius: 0.1rem;
+    border: #333F4D solid 3px;
+    box-shadow: 0 2px 4px;
+    margin-right: 1rem;
+}
+
+#hint-container figcaption {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    font-family: 'Lato', serif;
+    font-size: 0.4rem;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    text-wrap: wrap;
+    max-width: 500px
+}
+
+#hint-container.show-image img {
+    visibility: visible;
+    opacity: 1;
+}
+
+#hint-container.show-image figcaption {
+    visibility: visible;
+    opacity: 1;
 }
 
 #hint {
@@ -74,6 +103,7 @@ main img {
     padding-left: 0.7rem;
     width: 80%;
     text-align: right;
+    padding-right: 1rem;
 }
 
 p {
@@ -85,6 +115,8 @@ p {
 /* Roles Section */
 #roles {
     padding: 0rem;
+    overflow: hidden;
+    margin-bottom: 6rem;
 }
 
 #InFact {
@@ -156,6 +188,36 @@ p {
     width:100%;
 }
 
+.mus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mus p {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+    width: 300px;
+}
+
+.solo {
+    max-height: 300px;
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: center;
+    margin-left: 0.7rem;
+}
+
+.void {
+    max-height: 300px;
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    margin-right: 0.7rem;
+}
+
 #roles ul li {
     margin: 1rem 0;
     padding: 0rem;
@@ -208,13 +270,50 @@ p {
     margin: 0 auto;
 }
 
+#roles ul div p a {
+    color: #F7CA74;
+    font-size: 0.5rem;
+    font-style: italic;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    background-color: transparent;
+    max-width: 500px;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: background-color 2s; 
+}
+
+#roles ul div p a:visited {
+    font-size: 0.5rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    background-color: transparent;
+    max-width: 500px;
+    margin: 0 auto; 
+    text-decoration: none;
+    color:rgb(191, 209, 224);
+}
+
+#roles ul div p a:hover {
+    font-size: 0.5rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    background-color: transparent;
+    max-width: 500px;
+    margin: 0 auto; 
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s;
+}
+
 
 .hidden {
     visibility: hidden;
     opacity: 0;
     height: 0;
     transform: scale(0.8); /* Shrinks the section */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, height 3s ease;
+    transition: opacity 0s ease, transform 0s ease, visibility 0s ease, height 0s ease;
 }
 
 .visible {
@@ -268,12 +367,40 @@ footer {
 }
 
 /* Optional: Style for spans */
+footer {
+    margin: 0.4rem 0.4rem;
+}
+
 footer span {
-    /*padding: 0.5rem;
-    border-radius: 4px;*/
     background-color: #333F4D; /* Same as footer background */
     color: #F7CA74; /* Same font color */
-    font-size: 0.5rem
+    font-size: 0.5rem;
+}
+
+footer span a {
+    background-color: #333F4D; /* Same as footer background */
+    color: #F7CA74; /* Same font color */
+    text-decoration: none;
+    transition: background-color 2s;
+    font-size: 0.4rem;
+    letter-spacing: 0.07rem;
+}
+
+footer span .mail:hover {
+    background-color: #333F4D; /* Same as footer background */
+    color: #F7CA74; /* Same font color */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s;
+}
+
+svg {
+    fill: #F7CA74;
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    background-color: #333F4D;
 }
 
 /* Responsive Design */
@@ -294,7 +421,7 @@ footer span {
 
 .rotate-crazy {
     display: inline-block;
-    animation: spinJump 2s ease-in;
+    animation: spinJump 1.2s ease-in;
 }
 
 /* Keyframes for spinning (around Y-axis) and jumping */
