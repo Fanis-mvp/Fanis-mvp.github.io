@@ -8,21 +8,32 @@
     <title>Fanis Portfolio</title>
 </head>
 <body>
-<!--Main-->
-    <main>
-        <section id="home">
+<main>
+
+      <!--Welcome section and Hint-->
+        
+      <!--Welcome-->
+      <section id="welcome">
             <h1>Hello! <span id="name">I'm Fanis,</span></h1>
             <p>...a Front-End Developer based in Athens, Greece.<p>
-        </section>
-        <div id="hint-container">
-          <span id="hint">Hint: Search for <span id="flashy">flashy</span> stuff.<br>Click them for magic...</span>
+      </section>
+
+      <!--Hint-->
+      <div id="hint-container">
+        <span id="hint">Hint: Search for <span id="flashy">flashy</span> stuff.<br>Click them for magic...</span>
           <figure>
             <img src="Images/image01.jpeg" alt="an image of me at the Labyrinth of Horta in Barcelona." />
             <figcaption>That's me, by the way!<br> @ Horta Labyrinth in Barcelona.</figcaption>
           </figure>
       </div>
+
+
 <!-- Roles Section -->
 <section id="roles">
+
+  
+  <!--Colorful "multiple"-->
+
   <div id="InFact">
     <h2>In fact... I've got <span id="multiple">
       <span class="m">m</span><span class="u">u</span><span class="lt">lt</span><span class="i">i</span><span class="p">p</span><span class="l">l</span><span class="e">e</span>
@@ -30,20 +41,25 @@
     </h2>
       <p>here's what we can talk about:</p>
   </div>
+  
+  <!--Unfolding Roles List-->
+
   <ul>
-      <li id="development">Development</li>
-      <div class="dev hidden">
-          
-        <p>I started my developing journey at the dawn of 2024. I'm currently completing 
-          <a href="https://www.codecademy.com/career-journey/front-end-engineer" target=”_blank”>Codecademy's Front-End Engineer Career Path</a> and I'm super excited to begin working as a Front-End Developer! 
-        </p>
       
+    <!--Development-->
+    <li id="development">Development</li>
+      <div class="dev hidden">          
+        <p>I started my developing journey at the dawn of 2024. I'm currently completing 
+          <a href="https://www.codecademy.com/career-journey/front-end-engineer" target="_blank">Codecademy's Front-End Engineer Career Path</a> and I'm super excited to begin working as a Front-End Developer! 
+        </p>
       </div>
+    
+      <!--Music-->
       <li id="music">Music</li>
       <div class="mus hidden">
         <img class="void" src="Images/image02.jpg" alt="my band Void Era." />
         <p>I am an active electric guitarist.
-          I am in a band called <a href="https://www.voideraband.com/" target=”_blank”>Void Era</a> with whom we rock heavily.
+          I am in a band called <a href="https://www.voideraband.com/" target="_blank">Void Era </a> with whom we rock heavily.
           I am also a singer/songwriter.
           My favorite band is the Red Hot Chilli Peppers (and John Frusciante of course!),
           and I love funk music!
@@ -51,6 +67,8 @@
         </p>
         <img class="solo" src="Images/image03.jpg" alt="me onstage playing a guitar solo." />
       </div>
+    
+      <!--Therapy-->
       <li id="therapy">Therapy</li>
       <div class="ther hidden">
           <p>My basic proffession (prior to Development) is Physiotherapy. 
@@ -63,19 +81,22 @@
       </div>
   </ul>
 </section>
+</main>
+</body>
 
 <!-- Footer -->
+
 <footer id="contact">
     <span class="top-left">Thank you for dropping by!</span>
     <span class="center">If I can be of any further assistance,</span>
     <span class="bottom-right">feel free to contact me!</span>
     <span class="bottom-right2"><a class="mail" href="mailto:fanis.mvp@gmail.com">fanis.mvp@gmail.com</a>
-      <a href="https://www.facebook.com/fanis.mvp?locale=el_GR" target=”_blank”><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <a href="https://www.facebook.com/fanis.mvp?locale=el_GR" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.65 9.12 8.44 9.88v-6.99H7.89V12h2.55v-1.89c0-2.52 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.88h-2.33v6.99C18.35 21.12 22 16.99 22 12z"/>
   </svg></a>
   
   <!-- LinkedIn Logo -->
-  <a href="https://www.linkedin.com/in/fanis-mavropanos-020328325/" target=”_blank”><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <a href="https://www.linkedin.com/in/fanis-mavropanos-020328325/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
       <path d="M19.91 3H4.09A1.09 1.09 0 003 4.09v15.82C3 20.57 3.43 21 4.09 21h15.82c.66 0 1.09-.43 1.09-1.09V4.09A1.09 1.09 0 0019.91 3zM8.47 18.17H5.83V9.72h2.64v8.45zM7.15 8.64a1.53 1.53 0 110-3.06 1.53 1.53 0 010 3.06zm10.56 9.53h-2.63v-3.95c0-.94-.02-2.14-1.31-2.14-1.31 0-1.51 1.02-1.51 2.07v4.02h-2.63V9.72h2.52v1.16h.04c.35-.67 1.18-1.38 2.42-1.38 2.59 0 3.07 1.71 3.07 3.94v5.73z"/>
   </svg></a></span>
 </footer>
