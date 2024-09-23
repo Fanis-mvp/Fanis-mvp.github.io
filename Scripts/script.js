@@ -19,18 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // END Welcome Section -- Name spinJump
 
-// Hint Section -- Flashy image reveal
+// Hint Section -- Flashy (or underlined) image reveal
 
 document.addEventListener("DOMContentLoaded", function() {
     const flashyElement = document.getElementById('flashy');
+    const underlinedElement = document.getElementById('underlined');
     const hintContainer = document.getElementById('hint-container');
 
     flashyElement.addEventListener('click', function() {
         hintContainer.classList.toggle('show-image');
     });
+    underlinedElement.addEventListener('click', function() {
+        hintContainer.classList.toggle('show-image');
+    });
 });
 
-// END Hint Section -- Flashy image reveal
+// END Hint Section -- Flashy (or underlined) image reveal
 
 // Colorful "multiple" Section -- "multiple" word animation
 

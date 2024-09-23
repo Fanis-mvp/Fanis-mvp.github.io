@@ -95,6 +95,22 @@ p {
     transition: background-color 0s;
 }
 
+#underlined {
+    font-family: 'Lato', serif;
+    font-size: 0.4rem;
+    color: #333F4D;
+    cursor: pointer;
+    transition: background-color 2s;
+    display: none;
+}
+
+#underlined:hover {
+    cursor: pointer;
+    background-color: #FFFFC6;
+    transition: background-color 0s;
+    display: none;
+}
+
 #hint-container {
     display: inline-flex;
     align-items: center;
@@ -444,6 +460,44 @@ svg {
 @media (max-width: 600px) {
     * {
         font-size: 20px;
+    }
+
+    #name {
+        text-decoration: underline;
+    }
+
+    #flashy {
+        display: none;
+    }
+    
+    #flashy:hover {
+        display: none;
+    }
+    
+    #underlined {
+        font-family: 'Lato', serif;
+        font-size: 0.4rem;
+        color: #333F4D;
+        cursor: pointer;
+        transition: background-color 2s;
+        display: inline-block;
+        text-decoration: underline;
+    }
+    
+    #underlined:hover {
+        cursor: pointer;
+        background-color: #FFFFC6;
+        transition: background-color 0s;
+        display: inline-block;
+        text-decoration: underline;
+    }
+
+    #multiple span {
+        text-decoration: underline;
+    }
+    
+    #multiple span:hover {
+        text-decoration: underline;
     }
 
     .mus {
